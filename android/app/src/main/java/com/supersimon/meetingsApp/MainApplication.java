@@ -1,3 +1,4 @@
+import com.streamvideo.reactnative.StreamVideoReactNative;
 package com.supersimon.meetingsApp;
 
 import android.app.Application;
@@ -70,7 +71,8 @@ public class MainApplication extends Application implements ReactApplication {
     }
     ReactNativeFlipper.initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
     ApplicationLifecycleDispatcher.onApplicationCreate(this);
-  }
+  StreamVideoReactNative.setup();
+}
 
   @Override
   public void onConfigurationChanged(@NonNull Configuration newConfig) {
